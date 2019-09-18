@@ -1,0 +1,8 @@
+
+How to use this app:
+help/start - node app.js:
+list
+add
+remove
+reset
+-----------------------------

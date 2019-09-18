@@ -4,15 +4,9 @@
 const fs = require('fs');
 
 function showHelp() {
-  fs.readFile('src/help.txt', 'utf8', function(err, data) {
-    if (err) {
-      console.log('Error: cannot read the Help file');
-    }
-    else {
-      fs.writeFile('src/writeHelp.txt', data); 
-    }
-    console.log(data);
+  fs.readFile('help.txt', 'utf8', function(err, data) {
+    console.log(err, 'Error: cannot read the Help file');
+    console.log(data); // help.txt contents
   });
-}
-
-console.log(showHelp);
+};
+showHelp();

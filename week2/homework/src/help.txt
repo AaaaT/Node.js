@@ -1,7 +1,7 @@
 How to use this app:
 
 help
-npm start:
+node index.js _or_ node index.js help
 
 list
 Shows current to-dos, or shows an appropriate text if there are no to-dos

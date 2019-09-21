@@ -1,0 +1,17 @@
+{
+  "name": "my-trainer-node_cli",
+  "version": "1.0.0",
+  "description": "Tutorial Source: Build a Command Line Interface with Node.js & MongoDB\r Author: Traversy Media\r Youtube.com",
+  "main": "cli_app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^3.0.1",
+    "inquirer": "^7.0.0",
+    "mongoose": "^5.7.1"
+  },
+  "devDependencies": {}
+}

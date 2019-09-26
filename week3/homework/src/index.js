@@ -4,13 +4,14 @@
 
 const Express = require('express');
 const app = new Express();
+const PORT      = 3000;
 // Use built-in JSON middleware to automatically parse JSON
 app.use(Express.json());
 
 
    
 app.get
-readTodo
+    readTodo
 // readTodo (GET /todos/:id)
 // Get a single to-do with ID :id
 
@@ -34,7 +35,12 @@ app.delete
     
 
     
-
+app.listen(PORT, error => {
+    if (error)
+      return console.error(error);
+  
+    console.log(`Server started on http://localhost:${PORT}`);
+  });
     
 
 

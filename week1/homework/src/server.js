@@ -3,7 +3,8 @@
 const http = require('http');
 
 function createServer() {
-  let state = 10;
+  const startValue = 10;
+  let state = startValue;
 
   const server = http.createServer((request, response) => {
 
@@ -25,6 +26,7 @@ function createServer() {
         response.write(JSON.stringify({ state: state }));
         break;
       case '/reset':
+        state = startValue;
         response.writeHead(200, { 'Content-Type': 'application/json' });
         response.write(JSON.stringify({ state: state }));
         break;

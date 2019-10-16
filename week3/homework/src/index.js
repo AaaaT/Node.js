@@ -18,7 +18,7 @@ function writeList(list) {
 
 
 app.get('/todos', (req, res) =>{
-    res.send(readList());
+    res.json(readList());
 });
 
 
@@ -30,13 +30,13 @@ app.get('/todos/:id', (req, res) =>{
       myTodo = JSON.stringify(todo)
     }
   }
-  res.send(myTodo)  
+  res.json(myTodo)  
 });
 
 
 app.delete ('/todos', (req, res) =>{
   writeList([]);
-  res.send();
+  res.json();
 });
 
 
@@ -48,7 +48,7 @@ app.put('/todos/:id/done', (req, res) =>{
       writeList(todos)
     }
   }
-  res.send() 
+  res.json() 
 });
 
 app.put('/todos/:id/notdone', (req, res) =>{
@@ -59,7 +59,7 @@ app.put('/todos/:id/notdone', (req, res) =>{
       writeList(todos)
     }
   }
-  res.send() 
+  res.json() 
 });
 
 
